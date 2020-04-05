@@ -1,0 +1,22 @@
+<p>A random about page</p>
+<div>
+    <label>Author:
+      <input [(ngModel)]="author" placeholder="author"/>
+    </label>    
+    <label>Title:
+     <input [(ngModel)]="title" placeholder="title"/>
+    </label>    
+    <label>Description:
+     <input [(ngModel)]="description" placeholder="description"/>
+    </label>
+  </div>
+
+  <button class="button" (click)="add()">Add</button>
+
+  <div *ngFor="let detail of details">
+    <span>Title: {{detail.getTitle()}}</span>      
+    <blockquote>{{detail.getDesc()}}</blockquote>      
+    <span>Written by: {{detail.getAuthor()}}</span>
+    <br/>
+  </div>
+
