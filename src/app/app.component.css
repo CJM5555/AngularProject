@@ -10,6 +10,7 @@ h2 {
 }
 nav a {
   padding: 5px 10px;
+  margin: 1%;
   text-decoration: none;
   margin-top: 10px;
   display: inline-block;

@@ -1,11 +1,14 @@
-<p>A random about page</p>
+<h3>About</h3>
+<p>This page enables user to add description about the project</p>
 <div>
-    <label>Author:
+    <label>Author     :
       <input [(ngModel)]="author" placeholder="author"/>
-    </label>    
-    <label>Title:
+    </label>   
+    <br/> 
+    <label>Title      :
      <input [(ngModel)]="title" placeholder="title"/>
     </label>    
+    <br/>
     <label>Description:
      <input [(ngModel)]="description" placeholder="description"/>
     </label>
@@ -13,10 +16,13 @@
 
   <button class="button" (click)="add()">Add</button>
 
-  <div *ngFor="let detail of details">
-    <span>Title: {{detail.getTitle()}}</span>      
-    <blockquote>{{detail.getDesc()}}</blockquote>      
-    <span>Written by: {{detail.getAuthor()}}</span>
-    <br/>
+  <div>
+    <div *ngFor="let detail of details" id="comment">
+      <h4>Title: {{detail.getTitle()}}</h4>      
+      <h5>Description: {{detail.getDesc()}}</h5>      
+      <h5>Written by: {{detail.getAuthor()}}</h5>
+      <br/>
+    </div>
   </div>
+
 

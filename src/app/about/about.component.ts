@@ -20,8 +20,10 @@ export class AboutComponent implements OnInit {
   }
 
   add(): void{
-    this.aboutService.setDetail(this.title,this.author,this.description);
-    this.details = this.aboutService.getDetails();
+    if(this.title != null && this.title != "" && this.author != null && this.author != "" && this.description != null && this.description != ""){
+      this.aboutService.setDetail(this.title,this.author,this.description);
+      this.details = this.aboutService.getDetails();
+    }
   }
 
 }
